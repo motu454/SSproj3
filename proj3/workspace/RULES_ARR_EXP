@@ -1,0 +1,27 @@
+Rules for ARR and EXP
+
+
+EXP:
+1. Do not depend on the order of evaluation for side effects
+2. Do not access a volatile object through a nonvolatile reference.
+3. Do not read uninitialized memory.
+4. Do not dereference null pointers.
+5. Do not cast pointers into more strictly aligned pointer types.
+6. Call functions with the correct number and type of arguments.
+7. Do not access a variable through a pointer of an incompatible type.
+8. Do not modify constant objects.
+9. Do not compare padding data.
+10. Do not rely on side effects in operands to sizeof, _Alignof, or _Generic.
+11. Do not perform assignments in selection statements.
+12. Do not use a bitwise operator with a Boolean-like operand.
+13. Do not call va_arg with an argument of the incorrect type.
+
+
+ARR:
+1. Ensure size arguments for variable length arrays are in a valid range.
+2. Do not subtract or compare two pointers that do not refer to the same array.
+3. Do not add or subtract a scaled integer to a pointer.
+4. Guarantee that library functions do not form invalid pointers.
+5. Do not subtract or compare two pointers that do not refer to the same array.
+6. Do not form or use out-of-bounds pointers or array subscripts.
+
